@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AeroCapture — svetainė ruošiama</title>
-<meta name="description" content="AeroCapture — dronų foto ir video Dzūkijoje. Svetainė ruošiama, užsakymus priimame jau dabar: info@aerocapture.lt.">
+<meta name="description" content="AeroCapture — dronų foto ir video Dzūkijoje. Svetainė ruošiama, užsakymus priimame jau dabar: info@aerocapture.lt, +370 647 65943.">
 <link rel="canonical" href="https://aerocapture.lt/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="lt_LT">
 <meta property="og:site_name" content="AeroCapture">
 <meta property="og:title" content="AeroCapture — dronų foto ir video Dzūkijoje">
-<meta property="og:description" content="Svetainė ruošiama. Užsakymus priimame jau dabar: info@aerocapture.lt.">
+<meta property="og:description" content="Svetainė ruošiama. Užsakymus priimame jau dabar: info@aerocapture.lt, +370 647 65943.">
 <meta property="og:url" content="https://aerocapture.lt/">
 <meta property="og:image" content="https://aerocapture.lt/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -82,7 +82,7 @@ h1, p { margin: 0; }
 .chip.alt { top: calc(var(--edge) + 6px); right: calc(var(--edge) + clamp(38px, 6vw, 58px)); }
 .chip.loc { bottom: calc(var(--edge) + 6px); left: calc(var(--edge) + clamp(38px, 6vw, 58px)); }
 .chip.gps { bottom: calc(var(--edge) + 6px); right: calc(var(--edge) + clamp(38px, 6vw, 58px)); }
-@media (max-width: 520px) { .chip.gps, .chip.alt { display: none; } }
+@media (max-width: 520px) { .chip.gps, .chip.alt, .chip.loc { display: none; } }
 
 /* Turinys */
 .wrap { position: relative; z-index: 2; width: 100%; max-width: 700px; margin: 0 auto; padding: clamp(84px, 14vh, 140px) 24px clamp(40px, 7vh, 72px); display: grid; justify-items: center; align-content: center; gap: 20px; text-align: center; }
@@ -100,11 +100,26 @@ h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.4rem
 .path .drone { position: absolute; top: 50%; left: 0; width: 30px; height: 30px; margin: -15px 0 0 -15px; color: #FFFFFF; --logo-accent: var(--sky); animation: fly 5.5s cubic-bezier(.45,0,.25,1) infinite; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.45)); }
 @keyframes fly { 0% { left: 7px; } 46%, 54% { left: calc(100% - 7px); } 100% { left: 7px; } }
 
-.contact { display: grid; justify-items: center; gap: 12px; margin-top: 6px; }
+.contact { display: grid; justify-items: center; gap: 14px; margin-top: 6px; width: 100%; }
 .note { color: var(--ink-2); font-size: 0.95rem; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 10px; background: var(--sun); color: var(--night); font: 600 1rem/1.2 var(--font-body); text-decoration: none; transition: background-color .15s ease; max-width: 100%; }
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 20px; border-radius: 10px; border: 1px solid transparent; background: var(--sun); color: var(--night); font: 600 1rem/1.2 var(--font-body); text-decoration: none; white-space: nowrap; transition: background-color .15s ease, border-color .15s ease; max-width: 100%; }
 .btn:hover { background: var(--sun-hover); }
+.btn-ghost { background: rgba(15, 27, 45, 0.55); color: var(--ink); border-color: rgba(169, 188, 211, 0.38); font-variant-numeric: tabular-nums; }
+.btn-ghost:hover { background: rgba(15, 27, 45, 0.78); border-color: var(--ink-2); }
 .btn svg { width: 18px; height: 18px; flex: none; }
+.links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 24px; }
+.social { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 4px; color: var(--ink-2); font-size: 0.95rem; font-weight: 500; text-decoration: none; transition: color .15s ease; }
+.social:hover { color: var(--ink); }
+.social svg { width: 18px; height: 18px; flex: none; }
+@media (max-width: 480px) {
+  body { position: relative; }
+  .hud { position: absolute; }
+  .actions { width: 100%; } .actions .btn { flex: 1 1 100%; }
+  .wrap { padding-top: 72px; gap: 16px; }
+  .logo { margin-bottom: 4px; }
+  .foot { padding-bottom: calc(var(--edge) + 36px); }
+}
 
 .foot { position: relative; z-index: 2; text-align: center; padding: 0 24px calc(var(--edge) + 50px); color: var(--ink-2); font-size: 0.85rem; }
 
@@ -134,8 +149,15 @@ h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.4rem
   <p class="lead">Netrukus čia rasite paslaugas, kainas ir darbų pavyzdžius. Nuotraukos ir video iš oro sodyboms, sklypams, ūkiams ir renginiams.</p>
   <div class="path" aria-hidden="true"><span class="wp a"></span><span class="wp b"></span><svg class="drone" viewBox="0 0 512 512"><use href="#ac-mark"/></svg></div>
   <div class="contact">
-    <p class="note">Užsakymus priimame jau dabar — parašykite:</p>
-    <a class="btn" href="mailto:info@aerocapture.lt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>info@aerocapture.lt</a>
+    <p class="note">Užsakymus priimame jau dabar:</p>
+    <div class="actions">
+      <a class="btn" href="mailto:info@aerocapture.lt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>info@aerocapture.lt</a>
+      <a class="btn btn-ghost" href="tel:+37064765943" aria-label="Skambinti +370 647 65943"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+370 647 65943</a>
+    </div>
+    <div class="links">
+      <a class="social" href="https://wa.me/37064765943" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp</a>
+      <a class="social" href="https://www.facebook.com/profile.php?id=61595491413737" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a>
+    </div>
   </div>
 </main>
 
