@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AeroCapture — svetainė ruošiama</title>
+<meta name="description" content="AeroCapture — dronų foto ir video Dzūkijoje. Svetainė ruošiama, užsakymus priimame jau dabar: info@aerocapture.lt.">
+<link rel="canonical" href="https://aerocapture.lt/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="lt_LT">
+<meta property="og:site_name" content="AeroCapture">
+<meta property="og:title" content="AeroCapture — dronų foto ir video Dzūkijoje">
+<meta property="og:description" content="Svetainė ruošiama. Užsakymus priimame jau dabar: info@aerocapture.lt.">
+<meta property="og:url" content="https://aerocapture.lt/">
+<meta property="og:image" content="https://aerocapture.lt/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0F1B2D">
+<meta name="color-scheme" content="dark">
+<link rel="preload" href="fonts/sora-latin-ext-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/sora-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Sora';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/sora-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Sora';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/sora-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/ibm-plex-mono-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+/* Laikinas puslapis: drono vaizdo ieškiklis virš Dzūkijos peizažo, centre — žinutė ir kontaktas. */
+:root {
+  --night: #0F1B2D;
+  --line: #26384F;
+  --ink: #F3F6FA;
+  --ink-2: #A9BCD3;
+  --sky: #3BA3F5;
+  --sun: #F28C28;
+  --sun-hover: #F7A04A;
+  --hud-bg: rgba(15, 27, 45, 0.62);
+  --rec: #FF5A3C;
+  --edge: clamp(14px, 3vw, 28px);
+  --font-display: "Sora", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--night); }
+body {
+  margin: 0; min-height: 100vh; min-height: 100svh;
+  display: grid; grid-template-rows: 1fr auto;
+  background: var(--night); color: var(--ink);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+:focus-visible { outline: 2px solid var(--sky); outline-offset: 3px; border-radius: 6px; }
+h1, p { margin: 0; }
+
+/* Peizažas iš oro po tamsia uždanga */
+.bg { position: fixed; inset: 0; width: 100%; height: 100%; display: block; transform: scale(1.08); animation: drift 40s ease-in-out infinite alternate; filter: saturate(0.85); }
+@keyframes drift { from { transform: scale(1.08) translate(-1.4%, -1%); } to { transform: scale(1.08) translate(1.4%, 1%); } }
+.veil { position: fixed; inset: 0; background: radial-gradient(120% 90% at 50% 46%, rgba(15, 27, 45, 0.72) 0%, rgba(15, 27, 45, 0.86) 55%, rgba(15, 27, 45, 0.95) 100%); }
+
+/* Ieškiklio kampai ir skrydžio duomenys */
+.hud { position: fixed; inset: 0; z-index: 1; pointer-events: none; font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #FFFFFF; }
+.hud .c { position: absolute; width: clamp(28px, 5vw, 46px); height: clamp(28px, 5vw, 46px); border: 3px solid rgba(255, 255, 255, 0.9); animation: focusin 1.1s cubic-bezier(.2,.7,.2,1) both; }
+.hud .tl { top: var(--edge); left: var(--edge); border-right: 0; border-bottom: 0; border-top-left-radius: 8px; }
+.hud .tr { top: var(--edge); right: var(--edge); border-left: 0; border-bottom: 0; border-top-right-radius: 8px; }
+.hud .bl { bottom: var(--edge); left: var(--edge); border-right: 0; border-top: 0; border-bottom-left-radius: 8px; }
+.hud .br { bottom: var(--edge); right: var(--edge); border-left: 0; border-top: 0; border-bottom-right-radius: 8px; }
+@keyframes focusin { from { opacity: 0.3; transform: scale(1.35); } to { opacity: 1; transform: scale(1); } }
+.chip { position: absolute; background: var(--hud-bg); padding: 4px 9px; border-radius: 6px; white-space: nowrap; }
+.chip.rec { top: calc(var(--edge) + 6px); left: calc(var(--edge) + clamp(38px, 6vw, 58px)); display: flex; align-items: center; gap: 7px; }
+.chip.rec i { width: 8px; height: 8px; border-radius: 50%; background: var(--rec); animation: blink 1.6s steps(1, end) infinite; }
+@keyframes blink { 50% { opacity: 0.15; } }
+.chip.alt { top: calc(var(--edge) + 6px); right: calc(var(--edge) + clamp(38px, 6vw, 58px)); }
+.chip.loc { bottom: calc(var(--edge) + 6px); left: calc(var(--edge) + clamp(38px, 6vw, 58px)); }
+.chip.gps { bottom: calc(var(--edge) + 6px); right: calc(var(--edge) + clamp(38px, 6vw, 58px)); }
+@media (max-width: 520px) { .chip.gps, .chip.alt { display: none; } }
+
+/* Turinys */
+.wrap { position: relative; z-index: 2; width: 100%; max-width: 700px; margin: 0 auto; padding: clamp(84px, 14vh, 140px) 24px clamp(40px, 7vh, 72px); display: grid; justify-items: center; align-content: center; gap: 20px; text-align: center; }
+.logo { display: block; width: min(300px, 72vw); height: auto; color: #FFFFFF; --logo-accent: var(--sky); margin-bottom: 10px; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sky); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.4rem, 1.35rem + 4.4vw, 4.6rem); line-height: 1.02; letter-spacing: -0.03em; text-wrap: balance; }
+.lead { color: var(--ink-2); max-width: 46ch; font-size: clamp(1.02rem, 0.96rem + 0.3vw, 1.18rem); text-wrap: pretty; }
+
+/* Skrydžio maršrutas: dronas skrenda tarp dviejų taškų */
+.path { position: relative; width: min(300px, 78%); height: 30px; margin: 6px 0 4px; }
+.path::before { content: ""; position: absolute; left: 7px; right: 7px; top: 50%; border-top: 2px dashed rgba(59, 163, 245, 0.75); }
+.path .wp { position: absolute; top: 50%; width: 14px; height: 14px; margin-top: -7px; border-radius: 50%; border: 2px solid var(--sky); background: var(--night); }
+.path .wp.a { left: 0; }
+.path .wp.b { right: 0; background: var(--sky); }
+.path .drone { position: absolute; top: 50%; left: 0; width: 30px; height: 30px; margin: -15px 0 0 -15px; color: #FFFFFF; --logo-accent: var(--sky); animation: fly 5.5s cubic-bezier(.45,0,.25,1) infinite; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.45)); }
+@keyframes fly { 0% { left: 7px; } 46%, 54% { left: calc(100% - 7px); } 100% { left: 7px; } }
+
+.contact { display: grid; justify-items: center; gap: 12px; margin-top: 6px; }
+.note { color: var(--ink-2); font-size: 0.95rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 10px; background: var(--sun); color: var(--night); font: 600 1rem/1.2 var(--font-body); text-decoration: none; transition: background-color .15s ease; max-width: 100%; }
+.btn:hover { background: var(--sun-hover); }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+.foot { position: relative; z-index: 2; text-align: center; padding: 0 24px calc(var(--edge) + 50px); color: var(--ink-2); font-size: 0.85rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bg, .hud .c, .chip.rec i { animation: none; }
+  .path .drone { animation: none; left: 50%; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="ac-logo" viewBox="0 0 2307 512"><path d="M64 168V64H168M344 64H448V168M448 344V448H344M168 448H64V344" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/><path d="M223.5 223.5L164.0 164.0M288.5 223.5L348.0 164.0M288.5 288.5L348.0 348.0M223.5 288.5L164.0 348.0" fill="none" style="stroke:var(--logo-accent,#3BA3F5)" stroke-width="20" stroke-linecap="round"/><circle cx="164" cy="164" r="46" fill="none" style="stroke:var(--logo-accent,#3BA3F5)" stroke-width="18"/><circle cx="164" cy="164" r="11" style="fill:var(--logo-accent,#3BA3F5)"/><circle cx="348" cy="164" r="46" fill="none" style="stroke:var(--logo-accent,#3BA3F5)" stroke-width="18"/><circle cx="348" cy="164" r="11" style="fill:var(--logo-accent,#3BA3F5)"/><circle cx="348" cy="348" r="46" fill="none" style="stroke:var(--logo-accent,#3BA3F5)" stroke-width="18"/><circle cx="348" cy="348" r="11" style="fill:var(--logo-accent,#3BA3F5)"/><circle cx="164" cy="348" r="46" fill="none" style="stroke:var(--logo-accent,#3BA3F5)" stroke-width="18"/><circle cx="164" cy="348" r="11" style="fill:var(--logo-accent,#3BA3F5)"/><path d="M256 210a46 46 0 1 0 0.01 0zM256 232a24 24 0 1 1 -0.01 0z" fill="currentColor" fill-rule="evenodd"/><circle cx="256" cy="256" r="13" style="fill:var(--logo-accent,#3BA3F5)"/><path d="M611.276 348.0 672.008 164.04H738.788L801.788 348.0H758.948L744.08 302.388H667.22L652.604 348.0ZM732.74 268.116 709.808 197.808H700.484L678.056 268.116Z M881.924 352.788Q864.284 352.788 850.8019999999999 346.74Q837.3199999999999 340.692 828.374 330.486Q819.428 320.28 814.766 307.554Q810.1039999999999 294.828 810.1039999999999 281.472V276.432Q810.1039999999999 262.572 814.766 249.846Q819.428 237.12 828.248 227.04000000000002Q837.068 216.96 850.298 211.038Q863.5279999999999 205.11599999999999 880.4119999999999 205.11599999999999Q902.588 205.11599999999999 917.834 215.07Q933.0799999999999 225.024 941.144 241.026Q949.208 257.028 949.208 275.928V289.536H848.4079999999999Q849.164 295.584 851.18 300.624Q854.708 309.948 862.268 314.988Q869.828 320.028 881.924 320.028Q893.012 320.028 900.068 315.744Q907.1239999999999 311.46 909.644 305.15999999999997H946.688Q943.664 319.02 934.844 329.856Q926.024 340.692 912.6679999999999 346.74Q899.3119999999999 352.788 881.924 352.788ZM848.66 266.604H910.904Q910.1479999999999 260.808 908.132 256.02Q904.6039999999999 247.2 897.674 242.538Q890.7439999999999 237.876 880.4119999999999 237.876Q869.828 237.876 862.52 242.664Q855.212 247.452 851.4319999999999 256.524Q849.668 261.06 848.66 266.604Z M973.3999999999999 348.0V209.904H1005.4039999999999V255.51600000000002Q1007.6719999999999 235.86 1017.2479999999999 224.01600000000002Q1029.596 208.14 1053.2839999999999 208.14H1058.576V242.916H1048.4959999999999Q1031.8639999999998 242.916 1022.7919999999999 251.862Q1013.7199999999999 260.808 1013.7199999999999 277.692V348.0Z M1143.5 352.788Q1125.356 352.788 1111.244 347.118Q1097.1319999999998 341.448 1087.4299999999998 331.62Q1077.7279999999998 321.79200000000003 1072.6879999999999 309.06600000000003Q1067.648 296.34 1067.648 282.228V276.432Q1067.648 262.068 1072.8139999999999 249.08999999999997Q1077.98 236.112 1087.934 226.284Q1097.888 216.456 1112.0 210.786Q1126.1119999999999 205.11599999999999 1143.5 205.11599999999999Q1161.3919999999998 205.11599999999999 1175.378 210.786Q1189.364 216.456 1199.192 226.284Q1209.02 236.112 1214.312 249.08999999999997Q1219.6039999999998 262.068 1219.6039999999998 276.432V282.228Q1219.6039999999998 296.34 1214.5639999999999 309.06600000000003Q1209.524 321.79200000000003 1199.822 331.62Q1190.12 341.448 1176.0079999999998 347.118Q1161.896 352.788 1143.5 352.788ZM1143.5 318.76800000000003Q1155.344 318.76800000000003 1163.156 313.728Q1170.9679999999998 308.688 1175.1259999999997 299.616Q1179.2839999999999 290.544 1179.2839999999999 279.456Q1179.2839999999999 267.61199999999997 1175.0 258.666Q1170.716 249.72 1162.7779999999998 244.428Q1154.84 239.136 1143.5 239.136Q1132.412 239.136 1124.348 244.428Q1116.2839999999999 249.72 1112.1259999999997 258.666Q1107.9679999999998 267.61199999999997 1107.9679999999998 279.456Q1107.9679999999998 290.544 1112.0 299.616Q1116.032 308.688 1124.096 313.728Q1132.1599999999999 318.76800000000003 1143.5 318.76800000000003Z" fill="currentColor"/><path d="M1333.5079999999998 352.536Q1308.3079999999998 352.536 1290.542 343.716Q1272.7759999999998 334.896 1261.9399999999998 320.784Q1251.1039999999998 306.672 1246.0639999999999 290.166Q1241.024 273.65999999999997 1241.024 258.288V252.744Q1241.024 236.112 1246.1899999999998 219.48000000000002Q1251.3559999999998 202.848 1262.1919999999998 189.24Q1273.0279999999998 175.632 1290.4159999999997 167.316Q1307.8039999999999 159.0 1331.9959999999999 159.0Q1356.6919999999998 159.0 1374.3319999999999 167.56799999999998Q1391.9719999999998 176.136 1402.3039999999996 191.50799999999998Q1412.6359999999997 206.88 1414.9039999999998 227.796H1389.7039999999997Q1387.6879999999999 212.172 1379.6239999999998 201.966Q1371.5599999999997 191.76 1359.3379999999997 186.72Q1347.1159999999998 181.68 1331.9959999999999 181.68Q1315.6159999999998 181.68 1303.2679999999998 187.35000000000002Q1290.9199999999998 193.02 1282.7299999999998 203.226Q1274.5399999999997 213.432 1270.3819999999996 226.788Q1266.2239999999997 240.144 1266.2239999999997 255.768Q1266.2239999999997 270.63599999999997 1270.3819999999996 283.99199999999996Q1274.5399999999997 297.348 1282.9819999999997 307.68Q1291.4239999999998 318.012 1304.024 323.93399999999997Q1316.6239999999998 329.856 1333.5079999999998 329.856Q1357.196 329.856 1373.3239999999998 318.012Q1389.4519999999998 306.168 1392.9799999999998 283.74H1418.1799999999998Q1415.6599999999999 302.64 1405.4539999999997 318.264Q1395.2479999999998 333.888 1377.2299999999998 343.212Q1359.2119999999998 352.536 1333.5079999999998 352.536Z M1530.5719999999997 348.0V321.54Q1528.8079999999998 327.084 1526.2879999999998 331.62Q1520.4919999999997 341.448 1510.5379999999998 346.488Q1500.5839999999998 351.528 1486.4719999999998 351.528Q1471.3519999999996 351.528 1460.3899999999996 346.362Q1449.4279999999997 341.196 1443.5059999999999 331.36800000000005Q1437.5839999999998 321.54 1437.5839999999998 307.68Q1437.5839999999998 293.31600000000003 1444.0099999999998 283.74Q1450.4359999999997 274.164 1462.7839999999997 269.25Q1475.1319999999998 264.336 1492.5199999999998 264.336H1526.5399999999997V261.06Q1526.5399999999997 247.2 1519.3579999999997 240.144Q1512.1759999999997 233.088 1498.3159999999998 233.088Q1490.5039999999997 233.088 1482.1879999999996 233.33999999999997Q1473.8719999999998 233.59199999999998 1466.312 233.844Q1458.7519999999997 234.096 1453.2079999999996 234.6V213.432Q1458.7519999999997 212.928 1464.9259999999997 212.55Q1471.0999999999997 212.172 1477.6519999999996 212.046Q1484.2039999999997 211.92 1490.2519999999997 211.92Q1510.9159999999997 211.92 1524.0199999999998 216.834Q1537.1239999999998 221.748 1543.4239999999998 232.83599999999998Q1549.7239999999997 243.92399999999998 1549.7239999999997 262.824V348.0ZM1526.5399999999997 282.48H1491.5119999999997Q1476.8959999999997 282.48 1469.0839999999998 289.536Q1461.2719999999997 296.592 1461.2719999999997 307.68Q1461.2719999999997 318.76800000000003 1469.0839999999998 325.572Q1476.8959999999997 332.376 1491.5119999999997 332.376Q1500.0799999999997 332.376 1507.8919999999998 329.226Q1515.7039999999997 326.076 1520.87 318.642Q1526.0359999999998 311.20799999999997 1526.5399999999997 298.104Z M1592.8159999999998 398.4V213.432H1611.9679999999998V246.192Q1613.984 240.39600000000002 1616.7559999999999 235.608Q1624.5679999999998 222.0 1637.4199999999998 215.44799999999998Q1650.272 208.896 1665.3919999999998 208.896Q1680.0079999999998 208.896 1691.9779999999998 214.44Q1703.9479999999999 219.984 1712.5159999999998 229.56Q1721.0839999999998 239.136 1725.62 251.736Q1730.156 264.336 1730.156 278.448V282.984Q1730.156 297.096 1725.368 309.696Q1720.58 322.296 1711.886 331.87199999999996Q1703.1919999999998 341.448 1691.2219999999998 346.99199999999996Q1679.252 352.536 1664.888 352.536Q1650.524 352.536 1637.4199999999998 346.236Q1625.3239999999998 340.44 1617.0079999999998 327.84V398.4ZM1661.1079999999997 331.368Q1674.716 331.368 1684.7959999999998 324.942Q1694.8759999999997 318.516 1700.4199999999998 307.05Q1705.964 295.584 1705.964 280.716Q1705.964 265.596 1700.4199999999998 254.256Q1694.8759999999997 242.916 1684.7959999999998 236.49Q1674.716 230.064 1661.1079999999997 230.064Q1649.0119999999997 230.064 1638.6799999999998 235.482Q1628.3479999999997 240.9 1622.1739999999998 251.106Q1615.9999999999998 261.312 1615.9999999999998 275.676V287.26800000000003Q1615.9999999999998 301.128 1622.2999999999997 310.956Q1628.6 320.784 1638.9319999999998 326.076Q1649.264 331.368 1661.1079999999997 331.368Z M1817.5999999999997 349.512Q1802.4799999999998 349.512 1791.5179999999998 345.228Q1780.5559999999998 340.944 1774.6339999999998 330.486Q1768.7119999999998 320.028 1768.7119999999998 302.136V231.576H1745.5279999999998V213.432H1768.7119999999998V172.608H1791.8959999999997V213.432H1838.2639999999997V231.576H1791.8959999999997V305.15999999999997Q1791.8959999999997 315.996 1797.8179999999998 321.918Q1803.7399999999998 327.84 1814.5759999999998 327.84H1838.2639999999997V349.512Z M1917.896 352.032Q1893.956 352.032 1881.1039999999998 336.408Q1868.252 320.784 1868.252 291.3V213.18H1892.444V296.088Q1892.444 311.964 1901.012 320.90999999999997Q1909.58 329.856 1924.196 329.856Q1939.3159999999998 329.856 1948.8919999999998 320.154Q1958.4679999999998 310.452 1958.4679999999998 293.568V213.18H1982.6599999999999V348.0H1963.5079999999998V316.752Q1962.4999999999998 320.532 1961.2399999999998 323.808Q1955.9479999999999 337.668 1945.4899999999998 344.85Q1935.032 352.032 1918.9039999999998 352.032Z M2028.272 348.0V213.432H2047.424V253.752Q2049.944 235.608 2059.52 225.52800000000002Q2072.372 211.92 2098.328 211.92H2102.864V233.59199999999998H2094.296Q2074.136 233.59199999999998 2063.3 244.302Q2052.464 255.012 2052.464 275.172V348.0Z M2186.024 352.536Q2168.384 352.536 2155.532 346.488Q2142.68 340.44 2134.616 330.486Q2126.552 320.532 2122.6459999999997 308.18399999999997Q2118.74 295.836 2118.74 282.984V278.448Q2118.74 265.344 2122.6459999999997 252.99599999999998Q2126.552 240.648 2134.616 230.69400000000002Q2142.68 220.74 2155.154 214.81799999999998Q2167.628 208.896 2184.512 208.896Q2206.436 208.896 2220.674 218.346Q2234.912 227.796 2241.8419999999996 242.664Q2248.772 257.532 2248.772 274.416V285.252H2141.924Q2142.68 296.844 2146.712 306.42Q2151.248 318.012 2161.076 324.69Q2170.904 331.368 2186.024 331.368Q2201.9 331.368 2211.8540000000003 324.312Q2221.808 317.256 2223.824 307.932H2246.504Q2243.732 321.79200000000003 2235.416 331.872Q2227.1 341.952 2214.5 347.244Q2201.9 352.536 2186.024 352.536ZM2142.932 267.108H2225.084Q2224.076 258.79200000000003 2221.052 251.988Q2216.516 241.656 2207.444 235.86Q2198.372 230.064 2184.512 230.064Q2170.148 230.064 2160.6980000000003 236.61599999999999Q2151.248 243.168 2146.712 254.50799999999998Q2144.192 260.304 2142.932 267.108Z" fill="currentColor"/></symbol><symbol id="ac-mark" viewBox="0 0 512 512"><path d="M64 168V64H168M344 64H448V168M448 344V448H344M168 448H64V344" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/><path d="M223.5 223.5L164.0 164.0M288.5 223.5L348.0 164.0M288.5 288.5L348.0 348.0M223.5 288.5L164.0 348.0" fill="none" style="stroke:var(--logo-accent,#3BA3F5)" stroke-width="20" stroke-linecap="round"/><circle cx="164" cy="164" r="46" fill="none" style="stroke:var(--logo-accent,#3BA3F5)" stroke-width="18"/><circle cx="164" cy="164" r="11" style="fill:var(--logo-accent,#3BA3F5)"/><circle cx="348" cy="164" r="46" fill="none" style="stroke:var(--logo-accent,#3BA3F5)" stroke-width="18"/><circle cx="348" cy="164" r="11" style="fill:var(--logo-accent,#3BA3F5)"/><circle cx="348" cy="348" r="46" fill="none" style="stroke:var(--logo-accent,#3BA3F5)" stroke-width="18"/><circle cx="348" cy="348" r="11" style="fill:var(--logo-accent,#3BA3F5)"/><circle cx="164" cy="348" r="46" fill="none" style="stroke:var(--logo-accent,#3BA3F5)" stroke-width="18"/><circle cx="164" cy="348" r="11" style="fill:var(--logo-accent,#3BA3F5)"/><path d="M256 210a46 46 0 1 0 0.01 0zM256 232a24 24 0 1 1 -0.01 0z" fill="currentColor" fill-rule="evenodd"/><circle cx="256" cy="256" r="13" style="fill:var(--logo-accent,#3BA3F5)"/></symbol></svg>
+
+<canvas class="bg" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+<div class="hud" aria-hidden="true">
+  <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
+  <span class="chip rec"><i></i>Ruošiama</span>
+  <span class="chip alt">Aukštis 85 m</span>
+  <span class="chip loc">Veisiejai · Dzūkija</span>
+  <span class="chip gps">54,10° Š · 23,70° R</span>
+</div>
+
+<main class="wrap">
+  <svg class="logo" viewBox="0 0 2307 512" role="img" aria-label="AeroCapture"><use href="#ac-logo"/></svg>
+  <p class="eyebrow">Dronų foto ir video · Dzūkija</p>
+  <h1>Svetainė ruošiama</h1>
+  <p class="lead">Netrukus čia rasite paslaugas, kainas ir darbų pavyzdžius. Nuotraukos ir video iš oro sodyboms, sklypams, ūkiams ir renginiams.</p>
+  <div class="path" aria-hidden="true"><span class="wp a"></span><span class="wp b"></span><svg class="drone" viewBox="0 0 512 512"><use href="#ac-mark"/></svg></div>
+  <div class="contact">
+    <p class="note">Užsakymus priimame jau dabar — parašykite:</p>
+    <a class="btn" href="mailto:info@aerocapture.lt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>info@aerocapture.lt</a>
+  </div>
+</main>
+
+<footer class="foot">© <span id="year">2026</span> AeroCapture · Bazė — Veisiejai, Lazdijų r.</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Fonas: piešta Dzūkijos sodyba iš oro (ta pati, kaip pagrindinėje svetainėje) */
+(function aerial() {
+  const cv = document.querySelector('.bg');
+  if (!cv || !cv.getContext) return;
+  const VW = 1200, VH = 900, TAU = Math.PI * 2;
+  const COL = {
+    green: ['#7C9E4E', '#8BAA59', '#6D8C44', '#97B465', '#5F7D3B', '#86A453'],
+    straw: ['#C8B36D', '#D3C07F', '#BCA45B', '#CDB874'],
+    soil: ['#8E6C49', '#7B5E40', '#9A7B57'],
+    tree: ['#2E4F31', '#38603D', '#294630', '#33573A', '#3F6A43']
+  };
+  function mulberry(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+  const pick = (r, arr) => arr[Math.floor(r() * arr.length)];
+  function tree(ctx, r, x, y, rad) {
+    ctx.fillStyle = 'rgba(14,22,14,0.38)'; ctx.beginPath(); ctx.arc(x + rad * 0.45, y + rad * 0.45, rad, 0, TAU); ctx.fill();
+    ctx.fillStyle = pick(r, COL.tree); ctx.beginPath(); ctx.arc(x, y, rad, 0, TAU); ctx.fill();
+    ctx.fillStyle = 'rgba(170,205,125,0.22)'; ctx.beginPath(); ctx.arc(x - rad * 0.3, y - rad * 0.32, rad * 0.5, 0, TAU); ctx.fill();
+  }
+  function forest(ctx, r, test, count, rmin, rmax) {
+    const pts = [];
+    for (let i = 0; i < count * 8 && pts.length < count; i++) { const x = r() * VW, y = r() * VH; if (test(x, y)) pts.push([x, y, rmin + r() * (rmax - rmin)]); }
+    pts.sort((a, b) => a[1] - b[1]);
+    ctx.fillStyle = '#24402A';
+    for (const p of pts) { ctx.beginPath(); ctx.arc(p[0], p[1], p[2] * 1.5, 0, TAU); ctx.fill(); }
+    for (const p of pts) tree(ctx, r, p[0], p[1], p[2]);
+  }
+  function fields(ctx, r, angle) {
+    ctx.save(); ctx.translate(VW / 2, VH / 2); ctx.rotate(angle);
+    const S = 1750; let y = -S / 2;
+    while (y < S / 2) {
+      const h = 80 + r() * 130; let x = -S / 2;
+      while (x < S / 2) {
+        const w = 180 + r() * 380, k = r();
+        ctx.fillStyle = pick(r, k < 0.5 ? COL.green : k < 0.78 ? COL.straw : COL.soil);
+        ctx.fillRect(x, y, w + 1, h + 1);
+        ctx.strokeStyle = 'rgba(20,30,10,0.08)'; ctx.lineWidth = 2;
+        const gap = 8 + r() * 6; ctx.beginPath();
+        if (r() < 0.5) { for (let xx = x + gap / 2; xx < x + w; xx += gap) { ctx.moveTo(xx, y); ctx.lineTo(xx, y + h); } }
+        else { for (let yy = y + gap / 2; yy < y + h; yy += gap) { ctx.moveTo(x, yy); ctx.lineTo(x + w, yy); } }
+        ctx.stroke();
+        ctx.strokeStyle = 'rgba(40,46,24,0.28)'; ctx.strokeRect(x, y, w, h);
+        x += w;
+      }
+      if (r() < 0.4) { for (let tx = -S / 2; tx < S / 2; tx += 18 + r() * 26) tree(ctx, r, tx, y + (r() - 0.5) * 6, 7 + r() * 5); }
+      y += h;
+    }
+    ctx.restore();
+  }
+  function makeBlob(r, cx, cy, rad, sx) {
+    sx = sx || 1.25;
+    const p1 = r() * TAU, p2 = r() * TAU, p3 = r() * TAU;
+    const R = (t) => rad * (1 + 0.16 * Math.sin(2 * t + p1) + 0.09 * Math.sin(3 * t + p2) + 0.05 * Math.sin(5 * t + p3));
+    const pts = [];
+    for (let i = 0; i < 72; i++) { const t = (i / 72) * TAU, rr = R(t); pts.push([cx + Math.cos(t) * rr * sx, cy + Math.sin(t) * rr]); }
+    return { pts, inside: (x, y, m) => { const dx = (x - cx) / sx, dy = y - cy; return Math.hypot(dx, dy) < R(Math.atan2(dy, dx)) * (m || 1); } };
+  }
+  function closed(ctx, pts) {
+    const n = pts.length; ctx.beginPath();
+    ctx.moveTo((pts[n - 1][0] + pts[0][0]) / 2, (pts[n - 1][1] + pts[0][1]) / 2);
+    for (let i = 0; i < n; i++) { const a = pts[i], b = pts[(i + 1) % n]; ctx.quadraticCurveTo(a[0], a[1], (a[0] + b[0]) / 2, (a[1] + b[1]) / 2); }
+    ctx.closePath();
+  }
+  function open(ctx, pts) {
+    ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]);
+    for (let i = 1; i < pts.length - 1; i++) { const a = pts[i], b = pts[i + 1]; ctx.quadraticCurveTo(a[0], a[1], (a[0] + b[0]) / 2, (a[1] + b[1]) / 2); }
+    const L = pts[pts.length - 1]; ctx.lineTo(L[0], L[1]);
+  }
+  function lake(ctx, r, b) {
+    ctx.lineJoin = 'round';
+    closed(ctx, b.pts); ctx.lineWidth = 30; ctx.strokeStyle = '#4C6B39'; ctx.stroke();
+    ctx.fillStyle = '#1D4A66'; ctx.fill();
+    ctx.lineWidth = 10; ctx.strokeStyle = 'rgba(80,150,170,0.55)'; ctx.stroke();
+    ctx.save(); closed(ctx, b.pts); ctx.clip();
+    ctx.strokeStyle = 'rgba(255,255,255,0.07)'; ctx.lineWidth = 3;
+    for (let i = 0; i < 26; i++) { const x = r() * VW, y = r() * VH, l = 30 + r() * 70; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + l, y - l * 0.08); ctx.stroke(); }
+    ctx.restore();
+  }
+  function road(ctx, pts, w) {
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    open(ctx, pts); ctx.strokeStyle = '#B7A882'; ctx.lineWidth = w + 5; ctx.stroke();
+    open(ctx, pts); ctx.strokeStyle = '#D6C9A6'; ctx.lineWidth = w; ctx.stroke();
+  }
+  function poly(ctx, pts) { ctx.beginPath(); pts.forEach((p, i) => (i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]))); ctx.closePath(); }
+  function lawn(ctx, pts, angle) {
+    ctx.save(); poly(ctx, pts); ctx.fillStyle = '#9BBC69'; ctx.fill(); ctx.clip();
+    ctx.translate(VW / 2, VH / 2); ctx.rotate(angle); ctx.fillStyle = 'rgba(255,255,255,0.06)';
+    for (let x = -900; x < 900; x += 28) ctx.fillRect(x, -900, 14, 1800);
+    ctx.restore();
+  }
+  function house(ctx, x, y, w, h, a, roof) {
+    ctx.save(); ctx.translate(x, y); ctx.rotate(a);
+    ctx.fillStyle = 'rgba(12,16,12,0.42)'; ctx.fillRect(-w / 2 + 8, -h / 2 + 10, w, h);
+    ctx.fillStyle = roof; ctx.fillRect(-w / 2, -h / 2, w, h);
+    ctx.fillStyle = 'rgba(255,255,255,0.14)'; ctx.fillRect(-w / 2, -h / 2, w, h / 2);
+    ctx.strokeStyle = 'rgba(0,0,0,0.3)'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(-w / 2 + 4, 0); ctx.lineTo(w / 2 - 4, 0); ctx.stroke();
+    ctx.restore();
+  }
+  function boundary(ctx, pts) {
+    ctx.save(); poly(ctx, pts); ctx.fillStyle = 'rgba(59,163,245,0.12)'; ctx.fill();
+    ctx.setLineDash([18, 12]); ctx.lineWidth = 5; ctx.strokeStyle = '#3BA3F5'; ctx.stroke(); ctx.setLineDash([]);
+    for (const [x, y] of pts) { ctx.beginPath(); ctx.arc(x, y, 9, 0, TAU); ctx.fillStyle = '#FFFFFF'; ctx.fill(); ctx.lineWidth = 5; ctx.strokeStyle = '#3BA3F5'; ctx.stroke(); }
+    ctx.restore();
+  }
+  function scene(ctx, r) {
+    fields(ctx, r, -0.18);
+    const L = makeBlob(r, 915, 300, 170);
+    forest(ctx, r, (x, y) => L.inside(x, y, 1.8) && !L.inside(x, y, 1.14) && x > 640 && Math.hypot(x - 668, y - 432) > 60, 1100, 9, 15);
+    lake(ctx, r, L);
+    road(ctx, [[-20, 770], [200, 705], [380, 610], [470, 540], [540, 505]], 13);
+    road(ctx, [[470, 540], [640, 650], [900, 705], [1220, 690]], 10);
+    const yard = [[345, 360], [612, 328], [652, 592], [378, 640]];
+    lawn(ctx, yard, -0.2);
+    for (let i = 0; i < 9; i++) tree(ctx, r, 400 + r() * 120, 560 + r() * 55, 9 + r() * 4);
+    house(ctx, 478, 438, 152, 84, -0.18, '#9A4E3C');
+    house(ctx, 580, 525, 92, 64, 0.12, '#5D6872');
+    house(ctx, 668, 432, 48, 40, 0.3, '#7A5442');
+    boundary(ctx, yard);
+  }
+  let lastW = 0, lastH = 0;
+  function paint() {
+    const w = window.innerWidth, h = window.innerHeight;
+    if (!w || !h) return;
+    lastW = w; lastH = h;
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+    const ctx = cv.getContext('2d');
+    const s = Math.max(cv.width / VW, cv.height / VH);
+    ctx.setTransform(s, 0, 0, s, (cv.width - VW * s) / 2, (cv.height - VH * s) / 2);
+    ctx.fillStyle = '#7C9E4E'; ctx.fillRect(0, 0, VW, VH);
+    scene(ctx, mulberry(7));
+  }
+  paint();
+  let t;
+  window.addEventListener('resize', () => {
+    clearTimeout(t);
+    t = setTimeout(() => { if (Math.abs(window.innerWidth - lastW) > 2 || Math.abs(window.innerHeight - lastH) > 120) paint(); }, 150);
+  });
+})();
+</script>
+</body>
+</html>
