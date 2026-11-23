@@ -1,0 +1,4 @@
+Contact: mailto:info@aerocapture.lt
+Expires: 2027-11-23T00:00:00Z
+Preferred-Languages: lt, en
+Canonical: https://aerocapture.lt/.well-known/security.txt
